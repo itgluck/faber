@@ -1,0 +1,74 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Расчет количества блоков</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding class="calc">
+    <h5>Параметры блока</h5>
+    <div id="param">
+      <ion-list>
+           <ion-item>
+            <ion-label floating>Высота (мм)</ion-label>
+            <ion-input type="number" value="250" [(ngModel)]="height"></ion-input>
+           </ion-item>
+           <ion-item>
+            <ion-label floating>Ширина (мм)</ion-label>
+            <ion-input type="number" value="350" [(ngModel)]="width"></ion-input>
+           </ion-item>
+           <ion-item>
+            <ion-label floating>Длина (мм)</ion-label>
+            <ion-input type="number" value="500" [(ngModel)]="long"></ion-input>
+           </ion-item>
+      </ion-list>
+    </div>
+    <h5>Вводные данные</h5>
+    <div id="data">
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Количество (шт)</ion-label>
+          <ion-input type="number" [(ngModel)]="pcs"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Стоимость блока (руб)</ion-label>
+          <ion-input type="number" value="16.9" [(ngModel)]="price"></ion-input>
+        </ion-item>
+        <!-- <ion-item>
+          <ion-label floating>Объём (м³)</ion-label>
+          <ion-input type="number" [(ngModel)]="total"></ion-input>
+        </ion-item> -->
+      </ion-list>
+    </div>
+    <!-- <button ion-button block (click)="Calc()">Расчитать</button> -->
+    
+
+    <hr>
+    <h2>Результат</h2>
+    <ion-card >
+      <ion-card-header text-center>
+        Блок: {{height}}x{{width}}x{{long}} мм
+      </ion-card-header>
+      <ion-card-content>        
+        <p>
+          Объём одного Блока: <span class="result"><i>{{getValue().toFixed(3)}}</i> м³</span>
+        </p>
+        <p>
+          Количество Блоков в 1м³: <span class="result"><i>{{getCube().toFixed(1)}}</i> шт</span>
+        </p>
+        <p>
+          Суммарный объём: <span class="result"><i>{{getTotalValue().toFixed(3)}}</i> м³</span>
+        </p>
+        <p>
+          Общая стоимость: <span class="result"><i class="red">{{getTotalPrice().toFixed(2)}}</i> руб </span>
+          <!-- {{text}}{{result}}  -->
+        </p>
+  
+        <!-- <p>{{text}}{{result}}
+        </p> -->
+      </ion-card-content>
+    </ion-card>
+  
+  </ion-content>

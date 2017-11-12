@@ -1,0 +1,29 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{ promo.title }}</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding class="news">
+  <ion-card>
+    <ion-card-content>
+        <h2>{{ promo.title }} </h2>
+        <h3>{{ promo.subtitle }}</h3>
+        <div class="news" text-center>
+          <img src="{{promo.img}}">
+        </div>
+
+        <p>
+            {{ promo.description_1 }}
+        </p>
+        <p>
+            {{ promo.description_2 }}
+        </p>
+    </ion-card-content>
+
+  </ion-card>
+
+
+  
+</ion-content> 

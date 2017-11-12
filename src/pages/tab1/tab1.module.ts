@@ -1,0 +1,15 @@
+import { NgModule } from '@angular/core';
+import { IonicPageModule } from 'ionic-angular';
+import { Tab1Page } from './tab1';
+// import { ModalContentPage } from './tab1';
+
+@NgModule({
+  declarations: [
+    Tab1Page,
+    // ModalContentPage,
+  ],
+  imports: [
+    IonicPageModule.forChild(Tab1Page),
+  ],
+})
+export class Tab1PageModule {}

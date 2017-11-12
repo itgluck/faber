@@ -1,0 +1,32 @@
+page-intro {
+
+    .center {
+        text-align: center;
+    }
+    .swiper-pagination-bullet-active {
+        background: $secondary;
+        opacity: 1;
+    }
+    ion-slides {
+        background: linear-gradient(0deg, #D1CDCA, #E6E5E3);
+        // background: #D8D4D1;
+    }
+    .swiper-slide img {
+        box-shadow: 0 -12px 26px #F1EFEF;
+        max-height: 700px;
+    }
+    .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
+        left: 0;
+        bottom: 2.5em;
+        width: 100%;
+    }
+    .introbtn{
+        z-index: inherit;
+        width: 25%;
+        position: absolute;
+        bottom: 2em;
+        right: 2em;
+        color:$secondary;
+        font-weight: 600;
+    }
+}

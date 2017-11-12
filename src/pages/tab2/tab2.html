@@ -1,0 +1,38 @@
+<!-- <ion-header>
+
+  <ion-navbar color="primary">
+
+
+    <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+    <ion-title>Каталог товаров</ion-title>
+   
+    <ion-buttons end> -->
+        <!-- <ion-label  (click)="doFrame()">Online</ion-label> -->
+        <!-- <ion-toggle checked="true" [(ngModel)]="localonline" color="child2"></ion-toggle>
+      </ion-buttons>
+      
+  </ion-navbar>
+</ion-header> -->
+
+
+<ion-content>
+  <div *ngIf="localonline;then isOnline else isOfline"></div>
+  
+  <ng-template #isOfline>    
+    <div class="networkmsn" text-center>
+      
+        <img (click)="doFrame()" src="assets/img/404.png" />
+     
+      Для загрузки актуальных данных необходимо подключение к сети. 
+    </div>
+
+  </ng-template>
+   
+  <ng-template #isOnline>
+    <!-- <ion-label  (click)="doFrame()">Online</ion-label> -->
+     <ion-toggle checked="true" [(ngModel)]="localonline" color="child2">Online</ion-toggle>
+    <iframe src="http://704916369.shop.faberlic.com/flipcatalog"></iframe>
+  </ng-template>
+</ion-content>

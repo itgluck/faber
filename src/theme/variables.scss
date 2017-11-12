@@ -34,14 +34,25 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
+  primary:    #D60058, 
+  secondary:  #D42C0F,
   danger:     #f53d3d,
-  light:      #f4f4f4,
+  light:      #F3EBEB,
+  bg:         #FAFAFA,
+  active:     #BA131A,
+  child:      #D42C0F,
+  child2:     #F73182,
+  hiden:     rgba(245,217,217,.5),
   dark:       #222
-);
-
-
+  );
+  
+  $primary: #D60058;
+  // $hiden:     rgba(245,217,217,.9);
+$secondary:  #D42C0F;
+$active: #444;
+$gray: #999;
+$hiden: rgba(201,196,175,.8);
+$milk: rgba(255,255,255,.2);
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
@@ -53,8 +64,14 @@ $colors: (
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
+.item-input .label-md, .item-select .label-md, .item-datetime .label-md {
+  color: $hiden;
+}
 
-
+// .item-md p {
+//   margin: 0 0 2px;
+//   color: #FA7979;
+// }
 
 // App Windows Variables
 // --------------------------------------------------

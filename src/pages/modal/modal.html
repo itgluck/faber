@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-title > 
+         Подробности
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button (click)="dismiss()">
+          <span ion-text color="primary" showWhen="ios">Закрыть</span>
+          <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+ 
+<ion-content >
+    <ion-list>
+        <ion-item>
+         
+          <h2>{{news.title}}</h2>
+          <p>{{news.note}}</p>
+        </ion-item>
+        <div class="news" text-center>
+
+          <img src="{{news.image}}">
+        </div>
+        <div class="news" padding>
+          
+          <p *ngFor="let item of news['items']">
+            {{item.block}}
+          </p>
+
+          <button ion-button full (click)="dismiss()">
+              <span ion-text >Закрыть</span>
+            </button>
+        </div>
+         
+         
+    </ion-list>
+
+
+  </ion-content>

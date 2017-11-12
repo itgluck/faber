@@ -1,0 +1,164 @@
+ page-menu {
+
+   ion-header .item-md {
+    padding-left: 0px;
+   }
+   .callme{
+     position: absolute;
+     top: 0em;
+     right: 7em;
+     z-index: 25;  
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     box-shadow: 1px 2px 3px #720;
+   }  
+   .logo {
+    width: 80%;
+    border: 0px;
+    margin: .5em auto;
+  }
+   .logo_c{
+     width: 70%;
+     margin: -1em auto -.6em;
+     color: #fff;
+     font-size: 1.2em;
+   }
+  
+   ion-header button a{
+     color: #fff;
+     font-size: .9em;
+     text-decoration: none;
+     top: 7em;
+     position: absolute;
+     right: 3em;
+   }
+ 
+ion-header .item-md h2 {
+  font-size: 1.6rem;
+  
+  line-height: 0;
+  margin: 0 12px;
+}
+.item-md h2 {
+  font-size: 1.2rem;
+  line-height: 2;
+  color: $gray;
+}
+ion-header .item-md p {
+  font-size: 1.2rem;
+  line-height: 1;
+  margin: 0 1em;
+  color:#999;
+}
+ion-header .item-md h1 {
+     font-size: 1.7rem;
+     font-weight: 600;
+     color:$secondary;
+
+  
+    }
+ }
+
+ .mainMenu {
+   div.scroll-content {
+     cursor: pointer;
+     display: table;
+     font-size: 1.2rem;
+     line-height: 4rem;
+     position: relative;
+     border-top: 0px;
+     text-transform: uppercase;
+     width: 100%;
+     font-variant: small-caps;
+     text-align: center;
+     font-weight: 600;
+   }
+   button {
+     height: 3em;
+   }
+   hr {
+     width: 80%;
+     margin-top: 15px;
+     margin-bottom: 2px;
+   }
+   .item {
+     color: #999; 
+     height: 2em;
+   }
+   .item-md {
+     margin-left: 16px;
+   }
+   .item-md.item-block .item-inner {
+     padding-right: 8px;
+     border-bottom: none;
+   }
+   .item-md ion-icon[item-left]+.item-inner,
+   .item-md ion-icon[item-left]+.item-input,
+   .item-md ion-icon[item-start]+.item-inner,
+   .item-md ion-icon[item-start]+.item-input {
+     margin-left: 16px;
+     font-size: 2rem; // height: .5em;
+   }
+   .icon-md-child {
+     color: #777;
+     text-shadow: 1px 1px 2px rgb(167, 154, 154);
+   }
+  
+   .label-md {
+     margin: 4px 8px 4px 0;
+   }
+   ion-label h2 {
+     margin: 0px;
+     font-size: 1.5rem;
+    //  font-weight: 500;
+     color:#666;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   }
+   img {
+     margin: 0 auto;
+     width: 90%;
+     max-width: 280px;
+   }
+ }
+
+ ion-footer img {
+   width: 60%;
+   margin-bottom: -9px;
+ }
+
+ @media only screen and (max-width: 22em) {
+   /* 320pixel / iPhone5 */
+ 
+   .mainMenu ion-label h2 {
+     margin: 0px;
+     font-size: 1.2rem;
+     font-weight: 600;
+   }
+ }
+
+ @media only screen and (max-width: 344px) {
+   /* 320pixel / iPhone5 */
+   .item-md ion-icon[item-left]+.item-inner,
+   .item-md ion-icon[item-left]+.item-input,
+   .item-md ion-icon[item-start]+.item-inner,
+   .item-md ion-icon[item-start]+.item-input {
+     margin-left: 5px;
+     font-size: 2.2rem;
+   }
+
+ }
+
+ @media only screen and (max-height: 630px) {
+   /* 320pixel / iPhone5 */
+   .mainMenu {
+     .label-md {
+       margin: 2px 4px 2px 0;
+     }
+     button {
+       height: 1.2em;
+     }
+   }
+
+  
+ }

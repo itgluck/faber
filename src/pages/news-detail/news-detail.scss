@@ -1,0 +1,17 @@
+  page-news-detail {
+  .scroll-content {
+    background: #ddd;
+  }
+  .news {
+    .card-md h2, h3 {
+      // font-size: .8em;
+      color: $primary;
+      line-height: .8;
+      font-variant-caps: small-caps;
+    }
+    h3 {
+      font-size: .9em;
+      padding-top: 0;
+    }
+  }
+  }

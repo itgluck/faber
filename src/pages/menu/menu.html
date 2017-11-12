@@ -1,0 +1,75 @@
+<ion-menu [content]="content">
+
+  <ion-header>
+
+    <div ion-item style="text-align:center; background: rgb(199,30,30);
+      background: -moz-linear-gradient(-45deg, #ED3B3B 1%, rgb(143,2,34) 44%, rgb(120,0,1) 100%);
+      background: -webkit-linear-gradient(-45deg, rgb(199,30,30) 1%,rgb(143,2,34) 44%,rgb(120,0,1) 100%);
+      background: linear-gradient(135deg, rgb(199,30,30) 1%,rgb(143,2,34) 44%,rgb(120,0,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c71e1e', endColorstr='#780001',GradientType=1 );">
+      <img menuClose src="assets/img/logo_w.png" class='logo'>
+
+      <ion-row text-center class="logo_c">
+        <ion-col (click)="callMe('tel:+79118512636')">
+            <ion-icon item-start name="call"></ion-icon>
+          </ion-col>
+          <ion-col (click)="mailMe('mailto:it.gluck@ya.ru')">
+              <ion-icon item-start name="mail"></ion-icon>
+            </ion-col>
+            <ion-col (click)="openMap()">
+                <ion-icon item-start name="map"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </div>
+    <!-- <ion-item (click)="callMe('tel:+74012777239')">
+
+      <h2>Контакт-центер</h2>
+      <p>ежедневно с 9:00 до 20:00 </p>
+
+      <h1 item-end>8 911-851-26-36</h1>
+    </ion-item> -->
+    <!--
+      <ion-fab right top>
+          <button ion-fab mini>
+
+        <ion-icon name="call" ion-fab item-right ></ion-icon>
+        </button>
+        
+      </ion-fab> -->
+    <!-- <br><a href="mailto:it.gluck@ya.ru">Demo версия от 15.10.17</a> -->
+    <!-- <ion-avatar >
+        <img class="callme" (click)="callMe('tel:+74012777239')" menuClose src="assets/img/call.png">
+      </ion-avatar> -->
+
+  </ion-header>
+
+  <ion-content class="mainMenu">
+    <ion-list>
+
+      <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+        <h2>{{p.title }}</h2>
+      </button>
+
+      <!-- My button -->
+      <!-- <button ion-item onclick="window.open('geo: 54.7074,20.5084?z=11', '_system', 'location=yes'); return false;">
+    <ion-icon name="pin" item-left></ion-icon><h2>Контакты</h2></button> -->
+      <hr><button ion-item onclick="window.open('https://tdstroitel.ru/'); return false;">
+        <ion-icon name="globe" item-left></ion-icon>
+        <h2>Офицальный сайт</h2>
+      </button>
+      <button ion-item onclick="window.plugins.socialsharing.share('Торговый дом Строитель', 'Расчет строительных материалов', 'img.jpg', 'https://play.google.com/store/apps/details?id=com.itgluck.klobus39')">
+        <ion-icon name="share" item-left></ion-icon>
+        <h2>Поделиться</h2>
+      </button>
+    </ion-list>
+
+  </ion-content>
+
+  <!-- <ion-footer>
+
+  </ion-footer> -->
+
+
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

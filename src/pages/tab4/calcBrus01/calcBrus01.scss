@@ -1,0 +1,82 @@
+.calc div #param, #data{
+    width: 100%;
+    display: block;
+    ion-list {
+        display: flex;
+    }
+    .item {
+        padding-left: .2em;
+        margin-right: 1em;
+        font-size: 1.4rem;
+    }
+    @media screen and (max-device-width: 320px) {
+        .item {
+          
+            font-size: 1.2rem;
+        }
+    }
+    }
+    .item-inner {
+        overflow: unset;
+    }
+    // .list-md .item-input:last-child {
+    //     border-bottom: 1px solid rgb(222, 222, 222);
+    // }
+
+
+
+
+
+    .list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child, .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
+        border-bottom-color: #ddd;
+        -webkit-box-shadow: inset 0 -1px 0 0 #ddd;
+        box-shadow: inset 0 -1px 0 0 #ddd;
+        // margin-left: 0.8em;
+    }
+
+    .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+        border-bottom-color: #ddd;
+        -webkit-box-shadow: inset 0 -1px 0 0 #ddd;
+        box-shadow: inset 0 -1px 0 0 #ddd;
+    }
+    .list-ios > .item-block:first-child {
+        border-top: none;
+    }
+    .calc ion-card-content .result {
+        margin-right: .7em;
+        float: right;
+    }
+    ion-card-content .red{
+        color: $primary;
+    }
+    ion-card-content i {
+        font-weight: 600;
+        margin-right: .7em;
+        // float: left;
+    }
+    h2, h5 ,h3{
+        margin: 0 auto;
+        font-size: 1.32em;
+        padding: 10px;
+        color: $primary;
+    }
+    h3{
+        font-size: 1em;
+        // margin-left: 1em;
+    }
+ 
+
+        .card-header-md {
+            font-size: 1.6rem;
+            color: #670000;
+            padding: 16px;
+            background: #E3E3D5;
+        }
+        .card-header-md + .card-content-md, .card-md .item + .card-content-md {
+            padding-top: 1em;
+        }
+
+        .label-md[stacked], .label-md[floating] {
+            margin-left: 3px;
+            /* margin-bottom: 0; */
+        }

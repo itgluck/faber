@@ -1,0 +1,27 @@
+page-tab3 {
+  h2,
+  h3,
+  h4 {
+    color: $primary;
+  }
+  a {
+    text-decoration: none;
+    color: $primary;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  h4 {
+    font-size: .8em;
+  }
+  p {
+    text-indent: 1em;
+    text-align: justify;
+    color:#555;
+  }
+  img {
+    // margin: 0 auto;
+    width: 100%;
+    max-width: 280px;
+  }
+}

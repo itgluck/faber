@@ -1,0 +1,31 @@
+page-tab1 {
+    .scroll-content{
+        background: #ddd;}
+    p {
+        text-indent: 1em;
+        text-align: justify;
+    }
+    
+}
+        .news {
+            .item-md h2, h3{
+            // font-size: .8em;
+            color: $secondary;
+            line-height: .8;
+            font-variant-caps: small-caps;
+        }   
+            h3 {
+                font-size: .9em;
+                padding-top: 0;
+            }
+  
+
+    ion-card, .card-md {
+        max-width: 420px;
+        margin: 16px auto;
+        color: #555;
+    }
+    .item-md ion-avatar img {
+        border-radius: 0;
+    } 
+}

@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Расчет пиломатериалов</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="calc">
+    <ion-row>
+        <ion-col col-8>
+  <h5>Параметры бруса</h5>
+  </ion-col>
+  <ion-col>
+      <button ion-button outline small (click)="doClear()">Сброс</button>
+  </ion-col>
+    </ion-row>
+  <div id="param">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Толщина (мм)</ion-label>
+        <ion-input type="number" value="100" [(ngModel)]="height"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Ширина (мм)</ion-label>
+        <ion-input type="number" value="150" [(ngModel)]="width"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Длина (мм)</ion-label>
+        <ion-input type="number" value="6000" [(ngModel)]="long"></ion-input>
+      </ion-item>
+    </ion-list>
+  </div>
+  
+<ion-row>
+  <ion-col col-8>
+    <h5>Вводные данные</h5>
+  </ion-col>
+<ion-col>
+  <button ion-button outline small  (click)="toggleDiv()">1м³ / ед</button>
+</ion-col>
+</ion-row>
+
+
+
+  
+  <div id="param">
+    <ion-list>
+
+    <ion-item>
+        <ion-label floating>Количество (шт)</ion-label>
+        <ion-input type="number" [(ngModel)]="pcs"></ion-input>
+      </ion-item>
+      <ng-template #oddClicked>
+        <ion-item>
+          <ion-label floating>Стоимость 1м³ (руб)</ion-label>
+          <ion-input type="number" value="" [(ngModel)]="price"></ion-input>
+        </ion-item>
+
+      </ng-template>
+      <div *ngIf="visible;then evenClicked else oddClicked"></div>
+    </ion-list>
+   
+    <ng-template #evenClicked>
+      <ion-item>
+        <ion-label floating>Стоимость бруса (руб)</ion-label>
+        <ion-input type="number" value="" [(ngModel)]="price2"></ion-input>
+      </ion-item>
+    </ng-template>
+
+
+  </div>
+
+  <h2>Результат</h2>
+  
+      <ion-card>
+          <ion-card-header text-center>
+            Брус: {{height}}x{{width}}x{{long}} мм
+          </ion-card-header>
+          <ion-card-content>
+      
+            <p>
+              Объём одного бруса: <span class="result"><i>{{getValue().toFixed(3)}}</i> м³</span>
+            </p>
+            <p>
+              Вес одного бруса: <span class="result"><i>{{getWeight().toFixed(2)}}</i> кг</span>
+            </p>
+            <p>
+              Количество бруса в 1м³: <span class="result"><i>{{getCube().toFixed(1)}}</i> шт</span>
+            </p>
+            <p>
+              Суммарный объём: <span class="result"><i>{{getTotalValue().toFixed(3)}}</i> м³</span>
+            </p>
+            <p>
+              Суммарный вес: <span class="result"><i>{{getTotalWeight().toFixed(2)}}</i> кг</span>
+            </p>
+            <p>
+              Площадь по ширине бруса: <span class="result"><i>{{getTotalS().toFixed(2)}}</i> м²</span>
+            </p>
+            <p>
+              Общая стоимость: <span class="result"><i class="red">{{getTotalPrice().toFixed(2)}}</i> руб</span>
+        
+            </p>
+      
+          </ion-card-content>
+        </ion-card>
+
+</ion-content>

@@ -1,0 +1,137 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+
+
+    <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+
+    <ion-title>Акции и предложения</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="news">
+
+  <!-- HTTP -->
+  <ion-card *ngFor="let promo of (infoblocks | async)?.results" >
+  <!-- (click)="openDetails(promo)" --> 
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/icon.png">
+      </ion-avatar>
+      <h2>{{ promo.title }}</h2>
+      <h3>{{ promo.subtitle }}</h3>
+    </ion-item>
+
+    <img src="{{promo.img}}">
+
+    <ion-card-content>
+      <p>{{ promo.description_1 }}</p>
+      <p>{{ promo.description_2 }}</p>
+    </ion-card-content>
+
+  </ion-card>
+  
+
+  <!-- Card -->
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/icon.png">
+      </ion-avatar>
+      <h2>НАКОПИТЕЛЬНАЯ КАРТА</h2>
+      <h3>«ТД СТРОИТЕЛЬ»</h3>
+    </ion-item>
+
+    <img src="assets/img/001.png" >
+
+    <ion-card-content>
+      <p>Наш основной приоритет — удовлетворенность покупателей, поэтому мы предлагаем нашим постоянным клиентам возможность получить особые привилегии: более выгодные условия покупки товаров и получения сервисного обслуживания. Мы считаем, что наши клиентские программы помогут Вам более эффективно распоряжаться денежными средствами и экономить время.</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col text-right>
+          <button ion-button outline color="active" (click)="openModal({id:0})">
+              <span ion-text >Подробнее</span>
+            </button>
+      </ion-col>
+ 
+    </ion-row>
+
+  </ion-card>
+
+  <!-- Card -->
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/icon.png">
+      </ion-avatar>
+      <h2>БЕСПЛАТНАЯ ДОСТАВКА</h2>
+      <h3>ПРИ ЗАКАЗЕ В ИНТЕРНЕТ-МАГАЗИНЕ</h3>
+    </ion-item>
+
+    <img src="assets/img/002.png">
+
+    <ion-card-content>
+      <p>БЕСПЛАТНАЯ ДОСТАВКА ТОВАРА ПРИ ЗАКАЗЕ В ИНТЕРНЕТ-МАГАЗИНЕ ИЛИ ПО ТЕЛЕФОНУ КОНТАКТ-ЦЕНТРА 777-239.
+        </p>
+        <p>ДОСТАВКА ОСУЩЕСТВЛЯЕТСЯ ПО ГОРОДУ КАЛИНИНГРАДУ ПРИ СУММЕ ПОКУПКИ ОТ 1 000 РУБЛЕЙ, ВЕСОМ ДО 1,5 ТОНН, ОБЪЕМОМ ДО 6.0 М 3ЭКСПРЕСС-ДОСТАВКА</p>
+    </ion-card-content>
+    <ion-row>
+        <ion-col text-right>
+            <button ion-button outline color="active" (click)="openModal({id:1})">
+                <span ion-text >Подробнее</span>
+              </button>
+        </ion-col>
+   
+      </ion-row>
+  </ion-card>
+
+  <!-- Card -->
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/icon.png">
+      </ion-avatar>
+      <h2>Плитка фасадная</h2>
+      <p>CERRAD</p>
+    </ion-item>
+
+    <img src="assets/img/Intro_4.jpg">
+
+    <ion-card-content text-right>
+        <button ion-button outline color="active">
+            <span ion-text >Подробнее</span>
+          </button>
+    </ion-card-content>
+
+  </ion-card>
+
+  <!-- Card -->
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/icon.png">
+      </ion-avatar>
+      <h2>Блок газосиликатный</h2>
+      <p>ЭКОСТАНДАРТ</p>
+    </ion-item>
+
+    <img src="assets/img/Intro_6.jpg">
+
+    <ion-card-content text-right>
+        <button ion-button outline color="active">
+            <span ion-text >Подробнее</span>
+          </button>
+    </ion-card-content>
+
+  </ion-card>
+
+
+
+</ion-content>

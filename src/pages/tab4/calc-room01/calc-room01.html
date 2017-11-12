@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Расчет строительных объемов</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="calc">
+    <ion-row>
+        <ion-col col-8>
+            <h2>Параметры помещения</h2>
+  </ion-col>
+  <ion-col>
+      <button ion-button outline small (click)="doClear()">Сброс</button>
+  </ion-col>
+    </ion-row>
+  
+  <div id="param">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Высота (м)</ion-label>
+        <ion-input type="number" value="2.4" [(ngModel)]="hroom"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Ширина (м)</ion-label>
+        <ion-input type="number" value="4" [(ngModel)]="wroom"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Длина (м)</ion-label>
+        <ion-input type="number" value="7" [(ngModel)]="lroom"></ion-input>
+      </ion-item>
+    </ion-list>
+    
+    <h3>Дверной проем</h3>
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Высота (мм)</ion-label>
+        <ion-input type="number" value="210" [(ngModel)]="hdoor"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Ширина (мм)</ion-label>
+        <ion-input type="number" value="90" [(ngModel)]="wdoor"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Количество (шт)</ion-label>
+        <ion-input type="number" value="2" [(ngModel)]="ndoor"></ion-input>
+      </ion-item>
+    </ion-list>
+    <h3>Оконный проем</h3>
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Высота (мм)</ion-label>
+        <ion-input type="number" value="140" [(ngModel)]="hwindow"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Ширина (мм)</ion-label>
+        <ion-input type="number" value="120" [(ngModel)]="wwindow"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Количество (шт)</ion-label>
+        <ion-input type="number" value="1" [(ngModel)]="nwindow"></ion-input>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <!-- <button ion-button block (click)="Calc()">Расчитать</button> -->
+  <hr>
+  <ion-card>
+    <ion-card-header text-center>
+        Результат
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Площадь стен: <span class="result"><i>{{getSwall().toFixed(2)}}</i> м²</span>
+      </p>
+      <p>
+        Площадь дверных проемов: <span class="result"><i>{{getSdoor().toFixed(2)}}</i> м²</span>
+      </p>
+      <p>
+        Площадь оконных проемов: <span class="result"><i>{{getSwindow().toFixed(2)}}</i> м²</span>
+      </p>
+      <p>
+        Площадь пола (потолка): <span class="result"><i>{{getSfloor().toFixed(2)}}</i> м²</span>
+        <!-- {{text}}{{result}}  -->
+      </p>
+      <p>
+        Периметр пола (плинтус): <span class="result"><i>{{getPfloor2().toFixed(2)}}</i> м</span>
+        <!-- {{text}}{{result}}  -->
+      </p>
+      <p>
+        Периметр потолка (багет): <span class="result"><i>{{getPfloor().toFixed(2)}}</i> м</span>
+        <!-- {{text}}{{result}}  -->
+      </p>
+      <p>
+        Дверной наличник: <span class="result"><i>{{getNal().toFixed(2)}}</i> м</span>
+        <!-- {{text}}{{result}}  -->
+      </p>
+     
+
+      <!-- <p>{{text}}{{result}}
+      </p> -->
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
