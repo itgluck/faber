@@ -1,0 +1,20 @@
+? Connect this app to the Ionic Dashboard? Yes
+> ionic link
+a Looking up your apps - done!
+
+? Which app would you like to link Create a new app
+
+? Please enter a name for your new app: faberlicklg
+? Please enter a name for your new app: faberlicklg
+> ionic config set app_id "1a1ed084" --json
+[OK] app_id set to "1a1ed084" in .\faberlicklg\ionic.config.json!
+> ionic git remote
+> git remote add ionic git@git.ionicjs.com:it_gluck/faberlicklg.git
+[OK] Added remote ionic.
+[OK] Project linked with app 1a1ed084!
+> git add -A
+> git commit -m "Initial commit" --no-gpg-sign
+
+Next Steps:
+Go to your newly created project: cd .\faberlicklg
+Then, push your code to the Ionic Dashboard: git push ionic master
