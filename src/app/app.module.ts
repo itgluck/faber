@@ -1,29 +1,38 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
+
+// import {SocialSharing} from '@ionic-native/social-sharing';      
 import { StatusBar } from '@ionic-native/status-bar';
+import { Network } from '@ionic-native/network';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { HttpModule } from '@angular/http';
+import { IntroPage } from '../pages/intro/intro'
+// import { MenuPage } from '../pages/menu/menu';
+
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    IntroPage,
+    // MenuPage,
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    // MenuPage,
+    IntroPage
   ],
   providers: [
     StatusBar,
-    SplashScreen,
+    Network,
+    // SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

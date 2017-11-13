@@ -1,0 +1,23 @@
+{
+  "results": [{
+      "title": "Получайте баллы и подарки",
+      "subtitle": "Весь октябрь",
+      "img":  "https://tdstroitel.ru/images/companies/1/magazin/photo/08-svet-650px-compressed.png",
+      "description_1": "Все люстры - 15% дарим баллами",
+      "description_2": "Электрические теплый пол Raychem - 15% дарим баллами"
+  },
+    {
+      "title": "Общестроительные материалы",
+      "subtitle": "Весь ноябрь",
+      "img":  "https://tdstroitel.ru/images/companies/1/magazin/photo/stroyka-650px.png",
+      "description_1": "Купи 6 мешков раствора Ceresit CN 175 25 кг - 7-й мешок дарим",
+      "description_2": "Купи 5 мешков шпаклевки Akryl Putz Start 20 кг - 6-й мешок дарим"
+    }
+],
+  "info": {
+    "seed": "95191c57151c5da0",
+    "results": 4,
+    "page": 1,
+    "version": "1.0"
+  }
+}
